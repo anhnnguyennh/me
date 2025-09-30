@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.socials {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons .social-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+
+.social-icons .social-img:hover {
+    transform: translateY(-3px);
+    /* background: linear-gradient(90deg, #97a8ba 0%, #97a8ba 100%); */
+    border: 2px solid #373f51;
+
+}
+
+
+.resume {
+    width: 120px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 10px;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    background: white;
+    color: #151921;
+    font-weight: 500; 
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.resume:hover {
+    transform: translateY(-3px);
+    border: 2px solid #373f51;
+}
+
+.resume-img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.resume span {
+    font-size: 16px;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.nav-links {
+    position: fixed;
+    top: 2%;         
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2vw;
+    background: #95a7bad8;
+    padding: 0.9vh 5vw;
+    border-radius: 6px;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.0rem;
+    font-weight: 500;
+    padding: 0.9vh 1.3vw;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.nav-links a:first-child {
+    margin-right: 4vw; 
+    font-weight: 700; 
+    font-size: 1.2rem;
+}
+.nav-links a:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #373f51 0%, #373f51 100%);
+    border-radius: 20px;
+
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;       
+}
+
+.header-content h1 {
+    font-family: "Arial";
+    font-weight: normal;
+    font-size: 6vw;
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.4); */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hello {
+    font-size: 2.5vw;
+}
+
+.major {
+    font-size: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    padding: 20px;
+    width: 70%;
+}
+
+.container {
+    position: absolute; /* position relative to header */
+    top: 0;
+    left: 0;
+    width: 100%;        /* span entire header horizontally */
+    height: 100%;       /* span entire header vertically */
+    background-image: linear-gradient(
+        180deg,
+        #bcc0ca 20%,
+        #1a1a21 100%
+        );
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+
+h1 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 6em;
+}
+
+
+@media only screen and (max-width : 768px) {
+
+  h1 {
+    font-size: 3em;
+  }
+}
+
+
+
+main section {
+    padding: 50px 20px;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+main section:nth-child(even) {
+    background: #373f51;
+    /* background-image: linear-gradient(
+        135deg,
+        #1b1b1e 0%,
+        #373f51 100%
+        ); */
+    color: #d8dbe2;
+}
+
+main section:nth-child(odd) {
+    background: #1b1b1e;
+    /* background-image: linear-gradient(
+        45deg,
+        #373f51 0%,
+        #1b1b1e 100%
+        ); */
+    color: #d8dbe2;
+}
+
+
+.education-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6%;
+    margin-top: 30px;
+}
+
+.edu-box {
+    background: #d8dbe2;
+    color: #1b1b1e;
+    text-align: left;
+    padding: 2%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    width: 30%;
+    align-content: center;
+}
+
+.edu-box h3 {
+    padding-bottom: 20px;
+}
+.experience-container {
+    display: block;    /* regular block flow stacks automatically */
+    margin-top: 30px;
+    text-align: left;
+}
+
+.experience-box {
+    margin: 0 auto 40px auto; 
+    width: 70%;
+    border-radius: 10px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    padding: 2%;
+
+    background-color: #151921;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);    
+}
+
+.experience-box h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2%;
+}
+.dates {
+    font-weight: normal;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #d8dbe2;
+    color: #151921;
+    font-weight: 500;
+    /* border: 1.5px solid black; */
+    border-radius: 25px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.skill-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.skill-icon span {
+    font-size: 16px;
+}
+
+
+#projects {
+    padding: 60px 20px;
+    /* color: white; */
+}
+
+.proj-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 100px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.proj-box {
+    background-color: #151921;
+    /* border: 2px solid #373f51; */
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.proj-tags span {
+    padding: 6px 12px;
+    border: 1.5px solid #d8dbe2;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.proj-desc {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.proj-links {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 12px;
+    padding: 0;
+    background: transparent;
+    gap: 8px;
+}
+
+.proj-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #d8dbe2;
+    text-decoration: none;  
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1.5px solid #d8dbe2;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.proj-links a:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #97a8ba 0%, #4b8b95df 100%);
+}
+
+.proj-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#contact {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  margin: 20px auto 0;   
+  gap: 25px;
+  max-width: 300px;
+  /* margin-left: 40%; */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;  
+  justify-content: flex-start; 
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.contact-info a {
+  color: #d8dbe2;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Different background colors for each icon */
+.contact-icon.email   { background-color: #a9bcd0; }
+.contact-icon.github  { background-color: #a9bcd0; }
+.contact-icon.linkedin{ background-color: #a9bcd0; }
