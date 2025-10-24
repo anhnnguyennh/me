@@ -270,6 +270,25 @@ main section:nth-child(odd) {
     align-items: center;
     padding-bottom: 2%;
 }
+
+.experience-box a {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #d8dbe2;
+    text-decoration: none;  
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1.5px solid #d8dbe2;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.experience-box a:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #97a8ba 0%, #4b8b95df 100%);
+}
+
 .dates {
     font-weight: normal;
 }
